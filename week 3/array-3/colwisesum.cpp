@@ -11,23 +11,22 @@ int main(){
 int row=3;
 int column=3;
 
-int max=0;
+int sum=0;
 
-for (int  i = 0; i < row; i++)
+for (int j = 0; j < column; j++)
 {
-    for (int j = 0; j < column; j++)
+    for (int i = 0; i < row; i++)
     {
-        if (arr[i][j]>max)
-        {
-            max=arr[i][j];
-        }
-        
+        sum=sum+arr[i][j];
     }
+
+
+    cout<<"sum of column "<<j<<" is "<<sum<<endl;
+    sum=0;
     
-}
+} 
 
 
-cout<<"maximum no. in this array is "<<max<<endl;
 
 
 
