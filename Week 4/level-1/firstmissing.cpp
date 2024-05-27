@@ -1,14 +1,17 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-void findmissing(int arr[], int size) {
+void findMissing(vector<int>& arr) {
     int start = 0;
-    int end = size - 1;
+    int end = arr.size() - 1;
     int ans = -1;
 
-    if (arr[end] != end+1)
+    if (arr[end] != end+2)
     {
-        ans=end;
+        ans=end+2;
+        cout<<ans<<endl;
+        return;
     }
     
     while (start<=end)
@@ -26,13 +29,11 @@ void findmissing(int arr[], int size) {
         
     }
 
-    std::cout<<ans+1;
+    cout<<ans+1<<endl;
 }
 
-int main(){
-    int arr[]={1,2,3,4,5,6,7,8};
-    int size=9;
-
-    findmissing(arr,size);
+int main() {
+    vector<int> arr = {1,2,4,5,6,7,8};
+    findMissing(arr); 
     return 0;
 }
